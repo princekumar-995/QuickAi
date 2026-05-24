@@ -1,157 +1,158 @@
-# 🤖 QuickAI – AI Powered Web Application
+# QuickAI 🚀
 
-QuickAI is a full-stack AI-based web application built using the MERN stack.
-It provides multiple AI tools like content generation, image processing, and resume analysis in one place.
-
----
-
-## 🚀 Features
-
-✨ **Article Generation**
-Generate high-quality AI articles instantly.
-
-📝 **Blog Generation**
-Create structured blog content using AI.
-
-🧹 **Background Removal**
-Remove image backgrounds automatically.
-
-📄 **Resume Review**
-Analyze resumes and get smart suggestions.
-
-🖼️ **Image Generator**
-Generate images using AI from text prompts.
-
-🎯 **Object Removal**
-Remove unwanted objects from images.
+QuickAI is a modern AI-powered SaaS platform that provides multiple AI tools in one place including AI Chatbot, AI Resume Builder, ATS Resume Checker, AI Image Generator, Background Remover, and more.
 
 ---
 
-## 🛠️ Tech Stack
+## ✨ Features
 
-**Frontend**
-
-* React.js (Vite)
-* CSS / Tailwind
-
-**Backend**
-
-* Node.js
-* Express.js
-
-**Database**
-
-* MongoDB
-
-**APIs**
-
-* Gemini API
-* Image Processing APIs
+- 🤖 AI Chatbot
+- 📄 AI Resume Builder
+- 📊 ATS Resume Checker
+- 🧠 AI Resume Improvement
+- 🖼️ AI Image Generator
+- 🎨 Background Generator
+- ⚡ Fast AI Responses
+- 🌙 Modern Dark UI
+- 📱 Fully Responsive Design
+- 🔐 Authentication System
+- ☁️ MongoDB Database Integration
+- 📂 PDF & DOCX Resume Upload
+- 📈 Dynamic ATS Score
+- 🧾 Missing Keyword Detection
+- ✨ AI Prompt-Based Resume Editing
 
 ---
 
-## 📁 Folder Structure
+# 🛠️ Tech Stack
 
-```
-QuickAI/
-│
-├── client/      # Frontend (React)
-├── server/      # Backend (Node.js)
-└── README.md
+## Frontend
+- React.js
+- Tailwind CSS
+- Framer Motion
+
+## Backend
+- Node.js
+- Express.js
+
+## Database
+- MongoDB
+
+## AI APIs
+- OpenAI API
+- Gemini API
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/princekumar-995/QuickAi.git
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## Install Frontend Dependencies
 
-### 1️⃣ Clone Repository
-
-```
-git clone https://github.com/your-username/QuickAI.git
-cd QuickAI
-```
-
----
-
-### 2️⃣ Install Dependencies
-
-**Client**
-
-```
+```bash
 cd client
 npm install
 ```
 
-**Server**
+---
 
-```
-cd ../server
+## Install Backend Dependencies
+
+```bash
+cd server
 npm install
 ```
 
 ---
 
-### 3️⃣ Environment Variables
+# 🔑 Environment Variables
 
-Create a `.env` file inside **server folder**:
+Create `.env` file inside server folder.
 
-```
+```env
+OPENAI_API_KEY=your_api_key
+MONGODB_URI=your_mongodb_url
 PORT=5000
-MONGO_URI=your_mongodb_url
-GEMINI_API_KEY=your_api_key
 ```
 
 ---
 
-### 4️⃣ Run Project
+# ▶️ Run Project
 
-**Start Backend**
+## Start Backend
 
-```
+```bash
 cd server
-node server.js
+npm run dev
 ```
 
-**Start Frontend**
+## Start Frontend
 
-```
+```bash
 cd client
 npm run dev
 ```
 
 ---
 
-## 🌐 Usage
+# 📸 Main Modules
 
-* Open: http://localhost:5173
-* Use AI tools from dashboard
-* Generate articles, blogs, images, and review resumes
+## 🤖 AI Chatbot
+- Smart conversational AI
+- Prompt enhancement
+- Fast AI responses
 
----
+## 📄 Resume Builder
+- Create resumes using AI
+- Modern resume templates
+- Download functionality
 
-## 🔐 Security
+## 📊 ATS Resume Checker
+- Resume parsing
+- ATS score generation
+- Missing keyword analysis
+- AI improvement suggestions
 
-* `.env` file is not uploaded for security reasons
-* Never expose API keys publicly
-
----
-
-## 📌 Future Improvements
-
-* Authentication (Login/Signup)
-* Save user history
-* Payment integration
-* Better UI/UX
-
----
-
-## 🙌 Author
-
-**Prince Kumar**
-B.Tech CSE | MERN Developer
+## 🖼️ AI Image Generator
+- Generate AI images from prompts
+- Realistic, Anime, 3D styles
+- HD image generation
+- Download & regenerate support
 
 ---
 
-## ⭐ Support
+# 🌟 Future Improvements
 
-If you like this project, give it a ⭐ on GitHub 🚀
+- AI Video Generator
+- AI Voice Assistant
+- AI Presentation Generator
+- Multi-language Support
+- Premium Subscription System
+
+---
+
+# 👨‍💻 Developer
+
+Prince Kumar
+
+GitHub:
+https://github.com/princekumar-995
+
+---
+
+# 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+# ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub.
