@@ -1,20 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Inter:wght@100..900&display=swap');
 
 @import "tailwindcss";
 
-*{
-    font-family: "Poppins", sans-serif;
-
-
-}
-
-@theme{
+@theme {
     --color-primary: #5044E5;
-}
-.reset-tw,.reset-tw *{
-    all:revert !important;
+    --color-primary-dark: #3f36b8;
+    --color-bg-light: #f8fafc;
+    --color-card-light: rgba(255, 255, 255, 0.7);
+    --color-border-light: rgba(255, 255, 255, 0.3);
 }
 
+:root {
+  --background: #0b0f1a;
+  --foreground: #f8fafc;
+}
+
+.dark {
+  --background: #0b0f1a;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Glassmorphism Classes */
+.glass, .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dark .glass, .dark .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-card {
+  @apply rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/30;
+}
+
+/* Soft Gradients */
+.bg-gradient-soft {
+  background: radial-gradient(circle at top, #1a1625 0%, #0b0f1a 100%);
+}
+
+.dark .bg-gradient-soft {
+  background: radial-gradient(circle at top, #1a1625 0%, #0b0f1a 100%);
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+.animate-blob {
+  animation: blob 7s infinite;
+}
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Base reset for Clerk */
 .cl-drawerRoot {
-  z-index: 10 !important;
+  z-index: 50 !important;
+}
+
+/* Hide scrollbar for cleaner UI */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Global Premium Dark Theme Overrides */
+div.bg-white {
+  background-color: rgba(10, 10, 15, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.text-gray-900, .text-gray-800, .text-gray-700 {
+  color: #f8fafc !important;
+}
+
+.text-gray-600, .text-gray-500 {
+  color: #94a3b8 !important;
+}
+
+label {
+  color: #cbd5e1 !important;
+}
+
+input[type="text"], input[type="file"], textarea, select {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: rgba(168, 85, 247, 0.5) !important;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.15) !important;
+}
+
+/* Skeletons and utility boxes */
+div.bg-gray-50, div.bg-gray-100, li.bg-gray-50, li.bg-gray-100 {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: #e2e8f0 !important;
+}
+
+/* Override standard lists and descriptions inside tools */
+p {
+  color: #cbd5e1 !important;
+}
+
+p strong {
+  color: #ffffff !important;
+}
+
+/* Buttons color consistency */
+button:not([class*="bg-gradient"]):not([class*="bg-purple"]):not([class*="bg-pink"]):not([class*="bg-red"]):not([class*="bg-[#4A7AFF]"]):not([class*="bg-orange"]) {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #94a3b8 !important;
+}
+
+button:hover:not([class*="bg-gradient"]):not([class*="bg-purple"]):not([class*="bg-pink"]):not([class*="bg-red"]):not([class*="bg-[#4A7AFF]"]):not([class*="bg-orange"]) {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+}
+
+button[class*="bg-[#4A7AFF]"] {
+  background: linear-gradient(135deg, #4A7AFF 0%, #7F56D9 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+/* File upload hover box fixes */
+label[htmlFor*="Upload"] {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #94a3b8 !important;
+}
+label[htmlFor*="Upload"]:hover {
+  border-color: #a855f7 !important;
+  color: #ffffff !important;
 }

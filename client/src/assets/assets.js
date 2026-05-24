@@ -5,7 +5,7 @@ import star_icon from "./star_icon.svg";
 import star_dull_icon from "./star_dull_icon.svg";
 import profile_img_1 from "./profile_img_1.png";
 import arrow_icon from "./arrow_icon.svg";
-import { SquarePen, Hash, Image, Eraser, Scissors, FileText } from 'lucide-react'
+import { SquarePen, Hash, Image, Eraser, Scissors, FileText, Sparkles } from 'lucide-react'
 import ai_gen_img_1 from "./ai_gen_img_1.png";
 import ai_gen_img_2 from "./ai_gen_img_2.png";
 import ai_gen_img_3 from "./ai_gen_img_3.png";
@@ -22,6 +22,13 @@ export const assets = {
 
 export const AiToolsData = [
     {
+        title: 'Describe Your Problem',
+        description: 'Describe your coding or project problem, and get a step-by-step roadmap to solve it.',
+        Icon: Sparkles,
+        bg: { from: '#8B5CF6', to: '#EC4899' },
+        path: '/ai/describe-problem'
+    },
+    {
         title: 'AI Article Writer',
         description: 'Generate high-quality, engaging articles on any topic with our AI writing technology.',
         Icon: SquarePen,
@@ -36,13 +43,6 @@ export const AiToolsData = [
         path: '/ai/blog-titles'
     },
     {
-        title: 'AI Image Generation',
-        description: 'Create stunning visuals with our AI image generation tool, Experience the power of AI ',
-        Icon: Image,
-        bg: { from: '#20C363', to: '#11B97E' },
-        path: '/ai/generate-images'
-    },
-    {
         title: 'Background Removal',
         description: 'Effortlessly remove backgrounds from your images with our AI-driven tool.',
         Icon: Eraser,
@@ -50,11 +50,11 @@ export const AiToolsData = [
         path: '/ai/remove-background'
     },
     {
-        title: 'Object Removal',
-        description: 'Remove unwanted objects from your images seamlessly with our AI object removal tool.',
-        Icon: Scissors,
-        bg: { from: '#5C6AF1', to: '#427DF5' },
-        path: '/ai/remove-object'
+        title: 'AI Image Generation',
+        description: 'Create stunning visuals with our AI image generation tool, Experience the power of AI ',
+        Icon: Image,
+        bg: { from: '#20C363', to: '#11B97E' },
+        path: '/ai/generate-images'
     },
     {
         title: 'Resume Reviewer',
