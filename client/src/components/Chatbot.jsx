@@ -100,11 +100,15 @@ How can I help you elevate your project today?
         toast.error(response.data.message || "Failed to fetch response");
       }
     } catch (error) {
-      console.error(error);
+      console.error("Chat request failed:", error);
+      const serverMessage = error.response?.data?.message;
+      const statusText = error.response ? ` (HTTP ${error.response.status})` : "";
+      const errorDetail = serverMessage ? `${serverMessage}${statusText}` : `${error.message}${statusText}`;
+      
       const errorMessage = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: `⚠️ Something went wrong connecting to the AI brain. Please verify the backend server is running and API keys are set. Let me know if you would like to retry!`
+        content: `⚠️ **Connection Error:** ${errorDetail}\n\nPlease check that your backend server is running and the necessary API Keys (like \`GEMINI_API_KEY\` or \`OPENAI_API_KEY\`) are properly set in your backend \`.env\` file.`
       };
       saveHistory([...updatedMessages, errorMessage]);
     } finally {

@@ -684,6 +684,7 @@ Your response should be in pure, standard Markdown. Use clear headings (# for Na
 export const handleChat = async (req, res) => {
   try {
     const { message, history } = req.body;
+    console.log("📩 Incoming chat request message:", message);
 
     if (!message || !message.trim()) {
       return res.status(400).json({ success: false, message: "Message is required" });
